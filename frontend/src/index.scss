@@ -1,0 +1,51 @@
+@import "./assets/scss/customBootstrap";
+
+// Change default focus blue glow of bootstrap
+textarea:focus,
+input[type="text"]:focus,
+input[type="textarea"]:focus,
+input[type="range"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: $accent2;
+    box-shadow: 0 1px 1px $accent5 inset, -2px 1px 11px 5px $accent6;
+    outline: 0 none;
+}
+
+// insert an * after the label having required in the next input
+label:has(+ input:required)::after, .required::after {
+    content: " *";
+    color: $accent2;
+}
+
+input[type="range"]{
+    accent-color: $accent2;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $accent2;
+    }
+}

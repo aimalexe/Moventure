@@ -1,0 +1,144 @@
+@import "../../assets/scss/customBootstrap";
+
+
+.sticky {
+    background-color: $white;
+    transition: all 0.3s ease-out 0s;
+    box-shadow: 7px 15px 48px -3px $accent6;
+    backdrop-filter: blur(15px);
+}
+
+.navbar {
+    position: fixed;
+    transition: all 0.3s ease-out 0s;
+    padding: 0.3rem 2rem;
+    font-size: 1.2rem;
+    border-bottom: 0.01rem solid $accent3;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    background-color: transparent; /* Default transparent */
+}
+
+.navbar-toggler {
+    position: relative;
+    background-color: transparent;
+    border-color: transparent;
+
+    span {
+        display: block;
+        background-color: $accent2;
+        height: 4px;
+        width: 27px;
+        margin: 5px 0;
+        transform: rotate(0deg);
+        left: 0;
+        opacity: 1;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            transition: transform 0.35s ease-in-out;
+        }
+    }
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+
+    &:not(.collapsed) {
+        span:nth-child(1) {
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            transform: rotate(135deg);
+            opacity: 0.9;
+        }
+
+        span:nth-child(2) {
+            height: 12px;
+            visibility: hidden;
+            background-color: transparent;
+        }
+
+        span:nth-child(3) {
+            position: absolute;
+            left: 12px;
+            top: 10px;
+            transform: rotate(-135deg);
+            opacity: 0.9;
+        }
+    }
+}
+
+.logo {
+    height: 1.4em;
+    width: 2.5em;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: cursive;
+    color: $accent2;
+    text-transform: capitalize;
+}
+
+.navbar-nav {
+    .nav-link {
+        color: $accent1;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .nav-item {
+        position: relative;
+        margin-left: 20px;
+
+        a {
+            font-weight: 400;
+            transition: all 0.3s ease-out 0s;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 5px;
+                width: 0;
+                border-radius: 16px;
+                background: $accent2;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                transition: all 0.3s ease-out 0s;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav-link {
+    padding: 0.8rem 1rem;
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        background-color: inherit;
+    }
+
+    .nav-link {
+        padding: 0.7rem 1rem;
+    }
+
+    .navbar-nav {
+        .nav-item {
+            a::after {
+                display: none;
+            }
+        }
+    }
+}

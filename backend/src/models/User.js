@@ -55,7 +55,11 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(toJSON);
 
 userSchema.methods.generateAuthToken = function () {
-    return jwt.sign({ _id: this._id }, process.env.JWT_PRIVATE_KEY);
+    return jwt.sign(
+        { _id: this._id },
+        process.env.JWT_PRIVATE_KEY,
+        { expiresIn: '15d' } // Token will expire in 15 days
+    );
 };
 
 userSchema.pre('save', async function (next) {

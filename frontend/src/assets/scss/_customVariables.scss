@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+// custom color variables
+$accent1: #112b3c;
+$accent2: #fa7436;
+$accent3: #df6951;
+$accent4: #f1a501;
+$accent5: #ffe0aa;
+$accent6: #fdd3c0;
+
+// custom fonts variables.
+$poppins: 'Poppins', sans-serif;
+$volkhov: 'Volkhov', serif;
+
+// Export the colors as a map for use in Bootstrap utilities
+$custom-colors: (
+    "accent1": $accent1,
+    "accent2": $accent2,
+    "accent3": $accent3,
+    "accent4": $accent4,
+    "accent5": $accent5,
+    "accent6": $accent6,
+);
+

@@ -1,0 +1,41 @@
+@import "../../assets/scss/customVariables";
+
+.star-rating {
+    font-size: 1.5rem;
+    color: $accent4;
+    margin-bottom: 0.5rem;
+
+    .star {
+        cursor: pointer;
+    }
+}
+
+.error-message {
+    color: red;
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+}
+
+.modal-title {
+    color: #333;
+}
+
+// .form-control {
+//     margin-bottom: 1rem;
+// }
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 100%;
+        border-radius: 5px;
+        border: 1px solid $accent2;
+    }
+}

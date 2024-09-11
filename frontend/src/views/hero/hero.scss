@@ -1,0 +1,97 @@
+@import "../../assets/scss/customVariables";
+
+.hero-section {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+    height: auto;
+    padding-top: 50px;
+    min-height: 300px;
+    max-height: max-content;
+
+    .background-images {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+
+        .wave-svg {
+            display: block;
+            width: 100%;
+            height: auto;
+            opacity: 0.8;
+            transform: translateY(0) translateX(-50px);
+
+            @media (max-width: 992px) {
+                display: none;
+            }
+        }
+
+        .traveler-image {
+            display: none;
+        }
+    }
+
+    .container {
+        position: relative;
+        z-index: 2; // Ensure text is above images
+        height: 100%; // Ensure content fills the hero section height
+    }
+
+    .hero-content {
+        text-align: left;
+        padding: 20px;
+
+        .subtitle {
+            color: $accent2;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-family: $volkhov;
+        }
+
+        .title {
+            color: $accent1;
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+
+            @media (max-width: 768px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        .description {
+            font-size: 1rem;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            .play-icon {
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            
+            // max-width: 100%;
+            height: auto;
+            max-height: 100%; // Ensures image does not overflow section height
+            transform: translateY(0);
+            filter: drop-shadow(30px 10px 10px $accent5);
+
+            @media (max-width: 768px) {
+                width: 80%;
+                transform: translateY(0);
+            }
+        }
+    }
+}

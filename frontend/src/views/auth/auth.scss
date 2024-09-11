@@ -1,0 +1,120 @@
+@import "../../assets/scss/customVariables";
+
+.auth {
+    height: 100vh;
+    display: flex;
+
+    .left-section {
+        background-size: cover;
+        background-position: center;
+        width: 50%; // Set width for the left section
+        position: fixed; // Fix the position so it does not scroll
+        top: 0;
+        bottom: 0;
+        left: 0;
+
+        &.signup-page {
+            background-image: url("../../assets/images/sign-up-bg.webp"); // Signup page background image
+        }
+
+        &.signin-page {
+            background-image: url("../../assets/images/sign-in-bg.webp"); // Signin page background image
+        }
+
+        .image-overlay {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-image: linear-gradient(120deg, #ffffff, $accent1);
+            opacity: 0.8;
+            display: grid;
+            place-content: center;
+
+            h1 {
+                position: relative;
+                color: #000;
+                font-size: 2.5rem;
+                font-weight: bold;
+            }
+
+            p,
+            .experience {
+                color: #000;
+                margin-top: 10px;
+                font-size: 1.2rem;
+                &:last-child {
+                    font-style: italic;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .right-section {
+        background-color: #fff;
+        width: 50%; // Set width for the right section
+        margin-left: 50%; // Align it next to the fixed left section
+        height: 100vh; // Full viewport height
+        overflow-y: auto; // Allow vertical scrolling
+        padding: 10vh;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin: 0;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+
+            h2 {
+                font-size: 1.8rem;
+                margin: 30px auto;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .form-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                label {
+                    font-weight: bold;
+                }
+
+                input {
+                    width: 100%;
+                    border-radius: 5px;
+                    border: 1px solid $accent2;
+                }
+                
+            }
+
+            .create-account-btn {
+                max-width: minmax(50%, content);
+                margin-top: 20px;
+                border-radius: 5px;
+            }
+
+            .social-signup,
+            .login-link {
+                text-align: center;
+                margin-top: 30px;
+
+                p,
+                a {
+                    font-size: 0.9rem;
+                    color: $accent2;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../assets/scss/customVariables";
+
+.toast-success {
+    .toast-body, .toast-header {
+        background-color: #d4edda;
+        color: #155724;
+    }
+}
+
+.toast-error {
+    .toast-body, .toast-header  {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+}
+
+.toast-info {
+    .toast-body, .toast-header  {
+        background-color: $accent5;
+        color: $accent2;
+    }
+}
+
+.toast-warning {
+    .toast-body, .toast-header  {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+}
+
+.toast-container {
+    z-index: 10; // Ensure it is above other content
+
+    .toast-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+

@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { logger } from './logger.js';
+import { Destination } from '../models/Destination.js';
 
 export const connect2DB = () => {
     const username = process.env.DB_USERNAME;

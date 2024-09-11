@@ -1,0 +1,19 @@
+// write overrides here below like $primary: #f34d45
+
+
+
+// Import necessary Bootstrap SCSS files in the correct order
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Import your custom color variables
+@import "./customVariables";
+$font-family-sans-serif: $poppins;
+$font-family-serif: $volkhov;
+
+// Merge custom colors into Bootstrap's theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// Finally, import the rest of Bootstrap
+@import "bootstrap/scss/bootstrap";

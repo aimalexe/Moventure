@@ -1,0 +1,52 @@
+@import "../../assets/scss/customVariables";
+
+.profile-modal {
+    .modal-dialog {
+        max-width: 400px;
+        margin-right: 0;
+    }
+
+    .modal-content {
+        border-radius: 20px;
+    }
+}
+
+.profile-card {
+    border: none;
+    box-shadow: 0px 4px 15px $accent6;
+    overflow: hidden;
+
+    .profile-info {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .profile-initials {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+
+        h4 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .profile-details {
+        display: table;
+        margin: 0 auto;
+        p, div {
+            margin: 0;
+            strong {
+                color: $accent1;
+            }
+        }
+    }
+}

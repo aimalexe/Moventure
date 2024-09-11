@@ -41,3 +41,9 @@ destinationSchema.plugin(toJSON);
 const Destination = mongoose.model('Destination', destinationSchema);
 
 export { Destination };
+
+// TODO
+/**
+ * Add a tour Days for the destination tour count
+ * logic for price
+ */
