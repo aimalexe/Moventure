@@ -12,19 +12,20 @@ import Profile from "./feature/auth/login/Profile";
 const App = () => {
     return (
         <>
-        <BrowserRouter>
-             <Navbar />
-            <Routes>
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/singledestination/:id" element={<SingleDestination />} />
-                <Route path="/booking/:id" element={<Booking />} />
-                <Route path="/logout" element={<Logout/>}/>
-                <Route path="/profile" element={<Profile/>} />
-                <Route path="/" element={<Body />} />
-            </Routes>
-          </BrowserRouter>
-  
+            <BrowserRouter>
+                <Navbar />
+                <Routes>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/singledestination/:id" element={<SingleDestination />} />
+                    <Route path="/booking/:id" element={<Booking />} />
+                    <Route path="/logout" element={<Logout />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/" element={<Body />} />
+                </Routes>
+            </BrowserRouter>
+
         </>
     );
 };
